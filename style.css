@@ -1,0 +1,219 @@
+/* Basic Reset and Variables */
+:root {
+    --primary-color: #007bff; /* A nice blue for accents */
+    --secondary-color: #6c757d; /* Grey for metadata */
+    --background-color: #f8f9fa; /* Light grey background */
+    --card-background: #ffffff; /* White card/section background */
+    --text-color: #343a40; /* Dark text */
+    --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-family);
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--background-color);
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header Styling */
+#main-header {
+    background-color: var(--text-color);
+    color: var(--card-background);
+    padding: 40px 0;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#main-header h1 {
+    font-size: 2.8em;
+    margin-bottom: 5px;
+}
+
+#main-header h2 {
+    font-size: 1.5em;
+    font-weight: 300;
+    color: #adb5bd; /* Lighter grey for subtitle */
+    margin-bottom: 20px;
+}
+
+.profile-pic-placeholder {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background-color: var(--primary-color);
+    margin: 0 auto 15px;
+    border: 5px solid white;
+    /* In a real project, use: background-image: url('path/to/your/image.jpg'); background-size: cover; */
+}
+
+.contact-info a, .contact-info span {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 0.9em;
+    display: inline-block;
+}
+
+.contact-info a:hover {
+    color: var(--primary-color);
+}
+
+.contact-info i {
+    margin-right: 5px;
+}
+
+/* Main Content and Section Styling */
+main {
+    padding-top: 30px;
+}
+
+.section-block {
+    background-color: var(--card-background);
+    padding: 30px;
+    margin-bottom: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.section-block h3 {
+    font-size: 1.8em;
+    color: var(--primary-color);
+    border-bottom: 2px solid #e9ecef;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.section-block h3 i {
+    margin-right: 10px;
+}
+
+/* Skills Section */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.skill-category h4 {
+    color: var(--text-color);
+    margin-bottom: 10px;
+    border-bottom: 1px dashed #ced4da;
+    padding-bottom: 5px;
+}
+
+.skill-category ul {
+    list-style: none;
+    padding: 0;
+}
+
+.skill-category li {
+    background-color: #e9f5ff; /* Light blue chip background */
+    color: #004c99;
+    padding: 5px 10px;
+    border-radius: 4px;
+    margin-bottom: 8px;
+    display: inline-block;
+    margin-right: 5px;
+    font-size: 0.9em;
+}
+
+/* Experience Section */
+.job-entry {
+    margin-bottom: 30px;
+    border-left: 4px solid var(--primary-color);
+    padding-left: 15px;
+}
+
+.job-entry h4 {
+    font-size: 1.3em;
+    margin-bottom: 5px;
+    color: var(--text-color);
+}
+
+.job-entry .meta {
+    color: var(--secondary-color);
+    font-style: italic;
+    margin-bottom: 10px;
+    font-size: 0.9em;
+}
+
+.job-entry ul {
+    margin-left: 20px;
+}
+
+.job-entry li {
+    margin-bottom: 8px;
+}
+
+/* Education Section */
+.edu-entry {
+    margin-bottom: 20px;
+}
+
+.edu-entry h4 {
+    font-size: 1.2em;
+    margin-bottom: 3px;
+    color: var(--text-color);
+}
+
+.edu-entry .meta {
+    color: var(--secondary-color);
+    margin-bottom: 5px;
+}
+
+.edu-entry .note {
+    font-size: 0.9em;
+    color: #495057;
+}
+
+/* Certificates Section */
+#certificates ul {
+    list-style: disc;
+    margin-left: 20px;
+}
+
+/* Footer Styling */
+footer {
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 20px;
+    background-color: var(--text-color);
+    color: #adb5bd;
+    font-size: 0.8em;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #main-header {
+        padding: 30px 0;
+    }
+    #main-header h1 {
+        font-size: 2em;
+    }
+    #main-header h2 {
+        font-size: 1.2em;
+    }
+    .contact-info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .contact-info a, .contact-info span {
+        margin: 5px 0;
+    }
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+}
